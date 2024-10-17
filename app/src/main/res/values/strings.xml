@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">safedrive</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="report_types">
+        <item>ACCIDENT</item>
+        <item>ROAD_BLOCK</item>
+        <item>CONSTRUCTION</item>
+        <item>HEAVY_TRAFFIC</item>
+    </string-array>
+    <string name="select_report_type">Select Report Type</string>
+    <string name="enter_description">Enter Description (optional)</string>
+    <string name="submit_report">Submit</string>
+
+</resources>

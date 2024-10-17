@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- MapView to display the map -->
+    <org.osmdroid.views.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <!-- Origin Input Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Origin (Current Location)"
+        android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="4dp"
+    android:fontFamily="sans-serif-medium"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/origin_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Origin (Current Location)"
+        android:inputType="text"
+        android:padding="10dp"
+    android:background="@drawable/edit_text_background"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/origin_suggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Destination Input Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Destination"
+        android:textColor="@android:color/black"
+    android:textSize="16sp"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="4dp"
+    android:fontFamily="sans-serif-medium"/>
+
+    <EditText
+        android:id="@+id/destination_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Destination"
+        android:inputType="text"
+        android:padding="10dp"
+    android:background="@drawable/edit_text_background"/>
+
+    <ListView
+        android:id="@+id/destination_suggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Button to get directions -->
+    <Button
+        android:id="@+id/get_directions_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Directions"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+    android:padding="12dp"
+    android:backgroundTint="@color/material_dynamic_primary0"
+    android:textColor="@android:color/white"/>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!-- Error Message Text -->
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
+        android:textSize="14sp"
+    android:layout_marginTop="8dp" />
+
+</LinearLayout>
